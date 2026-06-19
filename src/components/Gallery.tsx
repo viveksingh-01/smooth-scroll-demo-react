@@ -22,9 +22,19 @@ export default function Gallery() {
         });
 
         gsap.to(item, {
+          scale: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: item,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+
+        gsap.to(item, {
           xPercent: xTransform,
           ease: "none",
-
           scrollTrigger: {
             trigger: item,
             start: "top bottom",
