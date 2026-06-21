@@ -16,9 +16,21 @@ export default function Footer() {
         scrub: true,
       },
     });
+    gsap.from("footer p", {
+      y: 120,
+      opacity: 0,
+      duration: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 70%",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
   });
   return (
-    <footer className="mt-24 p-8 lg:p-16 bg-black text-white">
+    <footer className="mt-24 p-8 lg:p-16 lg:pb-20 bg-black text-white">
       <h1 className="mb-3 text-5xl lg:text-8xl font-bold text-amber-500">Afterglow.</h1>
       <p className="tracking-widest">Interactive scroll-driven motion design experience.</p>
     </footer>
