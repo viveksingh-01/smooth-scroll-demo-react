@@ -19,6 +19,7 @@ const Hero = () => {
         start: "top bottom", // Starts when footer enters the bottom
         end: "top 70%",
         scrub: true,
+        invalidateOnRefresh: true, // Forces GSAP to recalculate if the page resizes
       },
     });
   });
