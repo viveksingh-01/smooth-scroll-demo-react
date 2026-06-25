@@ -20,6 +20,8 @@ const Hero = () => {
       scrollTrigger: {
         trigger: heroRef.current, // Start tracking based on the Hero section immediately
         start: "top top", // Starts the moment the user scrolls even 1px
+        // Dynamically calculate the end point based on the footer's distance from the top
+        end: () => `top+=${footerElement.getBoundingClientRect().top - window.innerHeight} top`,
         scrub: true,
         invalidateOnRefresh: true,
       },
